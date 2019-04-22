@@ -9,12 +9,12 @@
         <img src="<%= blog.image %>">
       </div>
       <div class="content">
-        <h2><%= blog.title %></h2>
+        <a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>
         <div class="meta">
           <span class="cinema"><%= blog.created.toDateString() %></span>
         </div>
         <div class="description">
-          <p><%= blog.body.substring(0, 100) %>...</p>
+          <p><%- blog.body.substring(0, 100) %>...</p>
         </div>
         <div class="extra">
           <div class="ui right floated primary button">
